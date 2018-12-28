@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	bar.Bar{}.P()
-	foo.Foo{}.P()
+	foo.CallBar(bar.Bar{})
+	bar.CallFoo(foo.Foo{})
 }

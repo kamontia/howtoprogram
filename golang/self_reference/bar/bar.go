@@ -3,7 +3,7 @@ package bar
 import (
 	"fmt"
 
-	"../foo"
+	"../common"
 )
 
 type Bar struct{}
@@ -12,6 +12,6 @@ func (b Bar) P() {
 	fmt.Println("bar")
 }
 
-func CallFoo() {
-	foo.Foo{}.P()
+func CallFoo(p common.Printer) {
+	p.P()
 }
